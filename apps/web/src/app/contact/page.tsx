@@ -5,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import StructuredData from "@/components/seo/structured-data";
+
+// SEO metadata for this page
+export const metadata = {
+  title: "Contact Us | WebCraft Pro",
+  description: "Get in touch with our web design and development team. We're here to answer your questions and help bring your website vision to life.",
+  keywords: "contact web designer, web development contact, website inquiry, get website quote, contact form",
+};
 
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,6 +32,68 @@ export default function ContactPage() {
 
   return (
     <main className="flex-1 overflow-y-auto py-16">
+      {/* Structured Data for SEO */}
+      <StructuredData 
+        type="Organization"
+        data={{
+          name: "WebCraft Pro",
+          url: "https://webcraft.pro",
+          logo: "https://webcraft.pro/svg/logo.svg",
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+1-555-123-4567",
+            contactType: "customer service",
+            email: "hello@webcraft.pro",
+            areaServed: "US",
+            availableLanguage: "English"
+          },
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "123 Web Design Street",
+            addressLocality: "San Francisco",
+            addressRegion: "CA",
+            postalCode: "94103",
+            addressCountry: "US"
+          },
+          sameAs: [
+            "https://facebook.com/webcraftpro",
+            "https://twitter.com/webcraftpro",
+            "https://instagram.com/webcraftpro",
+            "https://linkedin.com/company/webcraftpro"
+          ]
+        }}
+      />
+      <StructuredData 
+        type="FAQPage"
+        data={{
+          mainEntity: [
+            {
+              "@type": "Question",
+              "name": "How long does it take to build a website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typically 2-6 weeks depending on the complexity and scope of the project."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer website maintenance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer ongoing maintenance packages to keep your site secure and up-to-date."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's your payment process?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We typically require a 50% deposit to begin work, with the remaining balance due upon completion."
+              }
+            }
+          ]
+        }}
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`max-w-4xl mx-auto transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">

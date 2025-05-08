@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import StructuredData from "@/components/seo/structured-data";
 
 export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false);
@@ -15,6 +16,70 @@ export default function PricingPage() {
 
   return (
     <main className="flex-1 overflow-y-auto py-16">
+      {/* Structured Data for SEO */}
+      <StructuredData 
+        type="FAQPage"
+        data={{
+          mainEntity: [
+            {
+              "@type": "Question",
+              "name": "What's included in the Starter plan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Starter plan includes a responsive 5-page website, basic SEO optimization, contact form, mobile-friendly design, and 1 revision round."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer custom solutions beyond these packages?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we can create a tailored package specifically for your business requirements. Contact us to discuss your needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's the difference between monthly and yearly billing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yearly billing offers a 20% discount compared to monthly billing, providing significant savings for long-term commitments."
+              }
+            }
+          ]
+        }}
+      />
+      <StructuredData 
+        type="Service"
+        data={{
+          name: "Website Design and Development Services",
+          offers: [
+            {
+              "@type": "Offer",
+              "name": "Starter Plan",
+              "price": "49",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2026-12-31",
+              "description": "Perfect for small businesses just getting started online."
+            },
+            {
+              "@type": "Offer",
+              "name": "Professional Plan",
+              "price": "99",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2026-12-31",
+              "description": "Ideal for growing businesses that need more features."
+            },
+            {
+              "@type": "Offer",
+              "name": "Enterprise Plan",
+              "price": "249",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2026-12-31",
+              "description": "For established businesses requiring a comprehensive solution."
+            }
+          ]
+        }}
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`max-w-4xl mx-auto text-center transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">

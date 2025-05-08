@@ -1,0 +1,11 @@
+# WebCraft Pro robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://webcraft.pro/sitemap.xml
+
+# Disallow admin areas
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /api/
