@@ -5,13 +5,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import StructuredData from "@/components/seo/structured-data";
 
-// SEO metadata for this page
-export const metadata = {
-  title: "Features & Services | WebCraft Pro",
-  description: "Explore our comprehensive web design and development features including responsive design, SEO optimization, and stunning animations for your business website.",
-  keywords: "web design features, website services, responsive design, SEO optimization, website animations, custom web development",
-};
-
 export default function FeaturesPage() {
   const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
   

@@ -7,13 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import StructuredData from "@/components/seo/structured-data";
 
-// SEO metadata for this page
-export const metadata = {
-  title: "Contact Us | WebCraft Pro",
-  description: "Get in touch with our web design and development team. We're here to answer your questions and help bring your website vision to life.",
-  keywords: "contact web designer, web development contact, website inquiry, get website quote, contact form",
-};
-
 export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);

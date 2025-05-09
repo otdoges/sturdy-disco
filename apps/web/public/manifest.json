@@ -1,0 +1,23 @@
+{
+  "name": "WebCraft Pro - Premium Website Design & Development Services",
+  "short_name": "WebCraft Pro",
+  "description": "Professional website design and development with stunning animations, responsive layouts, and SEO optimization.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366F1",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

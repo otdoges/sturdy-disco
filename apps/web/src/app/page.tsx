@@ -1,9 +1,10 @@
 "use client";
-import { useEffect, useRef } from "react";
+
+import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import StructuredData from "@/components/seo/structured-data";
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     // Add staggered animations to features
     if (featuresRef.current) {
       const features = featuresRef.current.querySelectorAll('.feature-card');
-      features.forEach((feature, index) => {
+      features.forEach((feature: Element, index: number) => {
         setTimeout(() => {
           feature.classList.add('animate-slide-up');
         }, 200 * index);

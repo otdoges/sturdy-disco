@@ -1,6 +1,6 @@
-# website-to-sell-others-a-site
+# WebCraft Pro - Premium Website Design & Development Services
 
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines Next.js, Next, TRPC, and more.
+This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines Next.js, Next, TRPC, and more. It's a professional website for selling web design services, featuring stunning animations, responsive layouts, and comprehensive SEO optimization.
 
 ## Features
 
@@ -23,22 +23,24 @@ First, install the dependencies:
 ```bash
 bun install
 ```
+
 ## Database Setup
 
 This project uses SQLite with Prisma.
 
 1. Start the local SQLite database:
+
 ```bash
 cd apps/server && bun db:local
 ```
 
-2. Update your `.env` file in the `apps/server` directory with the appropriate connection details if needed.
+1. Update your `.env` file in the `apps/server` directory with the appropriate connection details if needed.
 
-3. Generate the Prisma client and push the schema:
+1. Generate the Prisma client and push the schema:
+
 ```bash
 bun db:push
 ```
-
 
 Then, run the development server:
 
@@ -50,11 +52,9 @@ Open [http://localhost:3001](http://localhost:3001) in your browser to see the w
 
 The API is running at [http://localhost:3000](http://localhost:3000).
 
-
-
 ## Project Structure
 
-```
+```plaintext
 website-to-sell-others-a-site/
 ├── apps/
 │   ├── web/         # Frontend application (Next.js)
@@ -70,3 +70,29 @@ website-to-sell-others-a-site/
 - `bun check-types`: Check TypeScript types across all apps
 - `bun db:push`: Push schema changes to database
 - `bun db:studio`: Open database studio UI
+
+## SEO Enhancements
+
+This website includes comprehensive SEO optimizations to improve search engine visibility and user experience:
+
+- **Structured Data**: JSON-LD implementation for rich search results
+- **Meta Tags**: Optimized title, description, and keyword meta tags for all pages
+- **Open Graph**: Complete Open Graph protocol implementation for better social media sharing
+- **Sitemap**: Dynamic sitemap.xml generation with proper changeFrequency and priority settings
+- **Robots.txt**: Custom robots.txt file for search engine crawling guidance
+- **Semantic HTML**: Proper use of HTML5 semantic elements for better accessibility and SEO
+- **Schema.org Markup**: Comprehensive schema.org markup for organization, services, and FAQs
+- **Canonical URLs**: Proper canonical URL implementation to prevent duplicate content issues
+- **Progressive Web App**: PWA support with manifest.json for better mobile experience
+
+## SVG Graphics
+
+The website features custom SVG graphics for enhanced visual appeal and performance:
+
+- **Logo**: Custom SVG logo with gradient effects
+- **Favicon**: SVG favicon for sharp rendering at any size
+- **Icons**: Custom SVG icons for features and services
+- **Wave Pattern**: Decorative SVG wave pattern for visual interest
+- **Open Graph Image**: SVG-based Open Graph image for social sharing
+
+All SVG graphics are optimized for performance and accessibility with proper alt text and ARIA attributes.

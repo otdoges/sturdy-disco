@@ -221,3 +221,34 @@
   box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.5);
   transform: translateY(-2px);
 }
+
+/* Spinner animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1.5s linear infinite;
+}
+
+.animate-reverse {
+  animation-direction: reverse;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}

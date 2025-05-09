@@ -31,7 +31,7 @@ export default function Footer() {
               <FooterLink href="/features" label="Features" />
               <FooterLink href="/pricing" label="Pricing" />
               <FooterLink href="/contact" label="Contact" />
-              <FooterLink href="/sitemap.xml" label="Sitemap" />
+              <FooterLink href="/site-map" label="Sitemap" />
             </ul>
           </div>
           
@@ -80,13 +80,13 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Terms of Service
             </Link>
-            <Link href="/sitemap.xml" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/site-map" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Sitemap
             </Link>
           </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "WebCraft Pro",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "WebCraft Pro - Pricing Plans",
