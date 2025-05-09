@@ -25,7 +25,7 @@ export default function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <p>Welcome {session?.user.name}</p>
-      <p>privateData: {privateData.data?.message}</p>
+      <p>privateData: {privateData.data && 'message' in privateData.data ? (privateData.data as any).message : ''}</p>
     </div>
   );
 }
